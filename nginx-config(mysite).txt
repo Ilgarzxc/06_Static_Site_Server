@@ -1,0 +1,15 @@
+server {
+    listen 80;
+    server_name vergunka.work www.vergunka.work;
+
+    root /var/www/mysite;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~* /(LICENSE|README.md|deploy.sh)$ {
+        deny all;
+    }
+}
