@@ -12,6 +12,17 @@
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
+.card a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.card a:hover {
+    opacity: 0.7;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
