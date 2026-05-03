@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "FreeMono", monospace;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(
+    -135deg,
+    rgb(216, 190, 216),#3ffcf3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: inline-grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.20);
+    border-radius: 2em;
+    padding: 4em 3em;
+    margin-inline: 1em;
+}
+
+.title{
+    font-size: 3em;
+}
+hr{
+    width: 100%;
+    background-color: grey;
+    height: 5px;
+    border-radius: 1em;
+    border: none;
+}
+
+.sessionid{
+    font-size: 2em;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+
+.timer{
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.mode-label{
+    font-size: 1.8em;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.button-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+button{
+    font-size: 2em;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    flex: 1;
+}
+button:hover{
+    transform: translateY(-10px);
+}
+button:focus{
+    outline: 3px solid #000;
+    outline-offset: 3px;
+}
+.settings-button{
+    font-size: 1.2em;
+    color: black;
+    background-color: rgb(238, 112, 238);
+    padding: 0.4em 0.8em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-weight: 600;
+    flex-basis: 100%;
+}
+.settings-button:hover{
+    transform: none;
+    opacity: 0.9;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content{
+    background: white;
+    color: black;
+    padding: 2em;
+    border-radius: 1em;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: 0.2s ease;
+}
+
+.modal.show .modal-content{
+    transform: scale(1);
+    opacity: 1;
+}
+
+#start{
+    background-color: green;
+}
+#stop{
+    background-color: red;
+}
+#reset{
+    background-color: blue;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 2em 1.5em;
+        gap: 1.5em;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .sessionid {
+        font-size: 1.4em;
+    }
+
+    .mode-label {
+        font-size: 1.4em;
+    }
+
+    .timer {
+        font-size: 2.5em;
+    }
+
+    button {
+        font-size: 1.4em;
+        padding: 0.4em 0.6em;
+    }
+
+    .settings-button {
+        font-size: 1em;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 1.5em;
+    }
+}

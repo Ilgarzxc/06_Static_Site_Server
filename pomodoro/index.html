@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <h1 class="title" aria-label="Pomodoro Timer">Pomodoro Timer</h1>
+      <p class="sessionid" id="sessionid">Session №1</p>
+      <hr>
+
+      
+      <p class="timer" id="timer">25:00</p>
+      <p id="modeLabel" class="mode-label">Work</p>
+
+      <div class="button-wrapper">
+        <button id="start" aria-label="Start timer">Start</button>
+        <button id="stop" aria-label="Stop timer">Stop</button>
+        <button id="reset" aria-label="Reset timer">Reset</button>
+        <button id="settings" class="settings-button" aria-label="Open settings">⚙️ Settings</button>
+      </div>
+    </div>
+    <div id="settingsModal" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <h2>Settings</h2>
+
+        <label>Work duration (minutes):</label>
+        <input type="number" id="workDuration">
+
+        <label>Short break(minutes):</label>
+        <input type="number" id="shortBreak">
+
+        <label>Long break(minutes):</label>
+        <input type="number" id="longBreak">
+
+        <label>Sessions before long break:</label>
+        <input type="number" id="sessionsCount">
+
+        <button id="saveSettings">Save</button>
+      </div>
+    </div>
+    
+    <script src="app.js"></script>
+  </body>
+</html>
