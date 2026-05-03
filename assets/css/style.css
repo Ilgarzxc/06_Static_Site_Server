@@ -124,6 +124,19 @@ body {
     opacity: 0.7;
 }
 
+.hero-tool {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.hero-tool:hover {
+    opacity: 0.7;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
